@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass ./scss/main.scss ./styles/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aman50/natours-project.git"
+  },
+  "author": "Aman Bhalla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aman50/natours-project/issues"
+  },
+  "homepage": "https://github.com/Aman50/natours-project#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
