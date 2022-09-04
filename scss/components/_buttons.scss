@@ -7,7 +7,7 @@
     padding: 1.5rem 4rem;
     position: relative;
     transition: all 0.1s;
-    font-size: 1rem;
+    font-size: $default-font-size;
 }
 
 .btn:hover {
@@ -22,7 +22,7 @@
 
 .btn--white {
     background-color: $color-white;
-    color: $color-light-gray;
+    color: $color-dark-gray;
 }
 
 .btn::after {
@@ -48,4 +48,29 @@
 
 .btn--animated {
     animation: moveInBottom 0.4s ease-out 0.75s backwards;
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        display: inline-block;
+        color: $color-primary;
+        font-size: $default-font-size;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        transform: translateY(-0.2rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
 }
