@@ -1,21 +1,26 @@
 .feature-box {
-    background-color: rgba($color-white, 0.7);
-    padding: 2.5rem;
-    font-size: $default-font-size;
-    box-shadow: 0 2rem 5rem rgba($color-black, 0.2);
-    border-radius: .3rem;
-    text-align: center;
-    transition: transform .2s;
+  background-color: rgba($color-white, 0.7);
+  padding: 2.5rem;
+  font-size: $default-font-size;
+  box-shadow: 0 2rem 5rem rgba($color-black, 0.2);
+  border-radius: 0.3rem;
+  text-align: center;
+  transition: transform 0.2s;
 
-    &__icon {
-        font-size: 6rem;
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-        -webkit-background-clip: text;
-        color:transparent;
-        margin-bottom: .5rem;
-    }
+  &__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+  }
 
-    &:hover {
-        transform: scale(1.03) translateY(-1rem);
-    }
+  &:hover {
+    transform: scale(1.03) translateY(-1rem);
+  }
 }
