@@ -25,3 +25,9 @@
 .u-margin-top-large {
     margin-top: 8rem;
 }
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
