@@ -483,6 +483,39 @@ html {
   transform: translate(-50%, -50%);
   text-align: center; }
 
+.footer {
+  padding: 4rem 12rem;
+  background-color: #333;
+  color: #f7f7f7; }
+  .footer__img-box {
+    text-align: center; }
+  .footer__img {
+    width: 2rem; }
+  .footer__navigation, .footer__desc {
+    border-top: 0.1rem solid #eee;
+    padding-top: 1rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 3rem; }
+  .footer__link:link, .footer__link:visited {
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+    color: #ffb900; }
+  .footer__link:hover, .footer__link:active {
+    color: #55c57a;
+    transform: rotate(8deg) scale(1.2);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3); }
+  .footer__desc {
+    width: 80%;
+    float: right; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
