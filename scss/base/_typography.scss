@@ -30,7 +30,7 @@ html {
 
 .heading-secondary {
     display: inline-block;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     text-transform: uppercase;
     font-weight: 700;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
@@ -50,6 +50,7 @@ html {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+    color: $color-dark-gray-3;
 }
 
 .paragraph {
@@ -58,4 +59,9 @@ html {
     &:not(:last-child) {
         margin-bottom: 4rem;
     }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }

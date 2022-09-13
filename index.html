@@ -40,7 +40,7 @@
           <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated">
+        <a href="#section-tours" class="btn btn--white btn--animated">
           Discover our tours
         </a>
       </div>
@@ -147,7 +147,7 @@
           </div>
         </div>
       </section>
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-text-center u-margin-bottom-large">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
@@ -177,7 +177,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">Rs 10000</p>
                   </div>
-                  <a href="#" class="btn btn--white">
+                  <a href="#booking-modal" class="btn btn--white">
                     Book now
                   </a>
                 </div>
@@ -209,7 +209,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">Rs 24000</p>
                   </div>
-                  <a href="#" class="btn btn--white">
+                  <a href="#booking-modal" class="btn btn--white">
                     Book now
                   </a>
                 </div>
@@ -241,7 +241,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">Rs 34000</p>
                   </div>
-                  <a href="#" class="btn btn--white">
+                  <a href="#booking-modal" class="btn btn--white">
                     Book now
                   </a>
                 </div>
@@ -254,13 +254,11 @@
         </div>
       </section>
       <section class="section-stories">
-        <!-- <div class="section__background"> -->
           <video class="section-stories__video" autoplay loop muted>
             <source src="./img/video.mp4" type="video/mp4">
             <source src="./img/video.webm" type="video/webm">
             Your browser is not supported
           </video>
-        <!-- </div> -->
         <div class="u-text-center u-margin-bottom-large">
           <h2 class="heading-secondary">We make people genuinely happy</h2>
         </div>
@@ -375,5 +373,21 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="booking-modal">
+      <div class="modal__body">
+        <div class="modal__left">
+          <img src="./img/nat-8.jpg" alt="Trip view" class="modal__img">
+          <img src="./img/nat-9.jpg" alt="Trip view" class="modal__img">
+        </div>
+        <div class="modal__right">
+          <a href="#section-tours" class="modal__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">Important - Please read the terms and conditions first</h3>
+          <p class="modal__content u-margin-bottom-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores consectetur cumque numquam. Eligendi ipsam ratione quaerat ipsum voluptatibus optio numquam, sequi ut nisi maxime voluptates inventore quibusdam eaque? Eveniet, molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugit sint mollitia exercitationem alias eveniet expedita, eum provident nam rem ducimus, id doloribus modi. Ipsam, quas iusto? Non, ipsam natus!</p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -75,16 +75,14 @@
         left: 0;
 
         &::after {
+            @include posAbsCenter;
+            
             content: "";
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
             background-color: $color-primary;
             display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             opacity: 0;
             transition: opacity .1s;
         }
