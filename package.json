@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:scss": "node-sass ./scss/main.scss ./styles/styles.css -w"
+    "compile:scss": "sass ./scss/main.scss ./styles/styles.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Aman50/natours-project#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "sass": "^1.54.9"
   }
 }
