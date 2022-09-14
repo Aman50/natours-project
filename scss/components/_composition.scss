@@ -8,20 +8,44 @@
         z-index: 1;
         transition: all 0.2s;
 
+        @include respond($tab-portrait) {
+            position: relative;
+            float: left;
+            width: 33.333%;
+            top: 0;
+        box-shadow: 0 2rem 10rem rgba($color-black, 0.2);
+        }
+
         
         &--p1 {
-            top: -2rem;
             left: 0;
+
+            @include respond($tab-portrait) {
+                top: 0rem;
+                transform: scale(1.1);
+            }
         }
 
         &--p2 {
             top: 2rem;
             right: 0;
+
+            @include respond($tab-portrait) {
+                top: -1rem;
+                transform: scale(1.2);
+                z-index: 3;
+            }
         }
 
         &--p3 {
             top: 10rem;
             left: 20%;
+
+            @include respond($tab-portrait) {
+                top: 0rem;
+                left: 0;
+                transform: scale(1.1);
+            }
         }
 
         &:hover {

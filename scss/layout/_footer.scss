@@ -3,13 +3,25 @@
     background-color: $color-dark-gray-3;
     color: $color-light-gray-1;
 
+    @include respond($tab-portrait) {
+        padding: 2rem 2rem;
+    }
 
     &__img-box {
         text-align: center;
+        margin-bottom: 8rem;
+
+        @include respond($tab-portrait) {
+            margin-bottom: 4rem;
+        }
     }
 
     &__img {
-        width: 2rem;
+        width: 12rem;
+
+        @include respond($phone) {
+            width: 8rem;
+        }
     }
     
     &__navigation,
@@ -17,6 +29,11 @@
         border-top: .1rem solid $color-light-gray-2;
         padding-top: 1rem;
         display: inline-block;
+
+        @include respond($tab-portrait) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -29,6 +46,10 @@
 
         &:not(:last-child) {
             margin-right: 3rem;
+
+            @include respond($tab-portrait) {
+                margin-right: 1.5rem;
+            }
         }
     }
 
@@ -55,5 +76,11 @@
     &__desc {
         width: 80%;
         float: right;
+
+        @include respond($tab-portrait) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
     }
 }

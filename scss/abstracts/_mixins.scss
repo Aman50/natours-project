@@ -4,3 +4,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+// Media Query Manager
+@mixin respond($screen) {
+    @if ($screen == $big-screen) {
+        @media (min-width: calc($big-screen / 16px * 1em)) {
+            @content;
+        }
+    }
+
+    @if ($screen != $big-screen) {
+        @media (max-width: calc($screen / 16px * 1em)) {
+            @content;
+        }
+    }
+}

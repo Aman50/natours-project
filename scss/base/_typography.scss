@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900');
 
 html {
-    font-size: 75%;
+    font-size: base-font-size(11px);
+
+    @include respond($tab-landscape) {
+        font-size: base-font-size(10px);
+    }
+
+    @include respond($tab-portrait) {
+        font-size: base-font-size(9px);
+    }
+
+    @include respond($big-screen) {
+        font-size: base-font-size(14px);
+    }
 }
 
 .heading-primary {
@@ -18,6 +30,15 @@ html {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
+
+    @include respond($tab-portrait) {
+        letter-spacing: 1rem;
+    }
+
+    @include respond($phone) {
+        font-size: 5rem;
+        letter-spacing: 1rem;
+    }
 }
 
 .heading-primary--sub {
@@ -26,6 +47,10 @@ html {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
+
+    @include respond($tab-portrait) {
+        letter-spacing: .3rem;
+    }
 }
 
 .heading-secondary {
@@ -39,6 +64,10 @@ html {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+
+    @include respond($phone) {
+        font-size: 2.25rem;
+    }
 
     &:hover {
         transform: scale(1.1) skewX(5deg) skewY(1deg);
