@@ -20,3 +20,9 @@
         }
     }
 }
+
+@mixin respond-image($smallVersionWidth) {
+    @media (min-resolution: 192dpi) and (min-width: calc($smallVersionWidth / 2)), (min-width: $smallVersionWidth) {
+        @content;
+    }
+}
