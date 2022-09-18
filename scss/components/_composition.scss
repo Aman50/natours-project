@@ -6,7 +6,7 @@
         position: absolute;
         box-shadow: 0 2rem 10rem rgba($color-black, 0.4);
         z-index: 1;
-        transition: all 0.2s;
+        transition: all 0.5s;
 
         @include respond($tab-portrait) {
             position: relative;
@@ -49,6 +49,7 @@
         }
 
         &:hover {
+            border-radius: .2rem;
             box-shadow: 0 4rem 4rem rgba($color-black, 0.5);
             z-index: 2;
             transform: scale(1.05) translateY(-0.1rem);

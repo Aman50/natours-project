@@ -29,8 +29,8 @@
       &-1 {
         background-image: linear-gradient(
           to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
+          $color-tertiary-2-light,
+          $color-tertiary-2-dark
         );
       }
 
@@ -61,7 +61,7 @@
   }
 
   &__picture {
-    height: 40%;
+    height: 45%;
     background-size: cover;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -70,16 +70,16 @@
     &--1 {
       background-image: linear-gradient(
           to bottom right,
-          $color-secondary-light,
-          $color-secondary-dark
+          $color-tertiary-2-light,
+          $color-tertiary-2-dark
         ),
         url("../img/nat-5-small.jpg");
 
         @include respond-image(62.5em) {
           background-image: linear-gradient(
             to bottom right,
-            $color-secondary-light,
-            $color-secondary-dark
+            $color-tertiary-2-light,
+            $color-tertiary-2-dark
           ),
           url("../img/nat-5.jpg");
         }
@@ -138,7 +138,7 @@
       box-decoration-break: clone;
 
       &--1 {
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(to right bottom, $color-tertiary-2-light, $color-tertiary-2-dark);
       }
 
       &--2 {
@@ -152,8 +152,6 @@
   }
 
   &__details {
-
-    padding: 2rem;
     
     ul {
       list-style: none;
