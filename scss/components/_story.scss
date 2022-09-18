@@ -21,12 +21,17 @@
         float: left;
         width: 12rem;
         height: 12rem;
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        border-radius: 50%;
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-2rem) skewX(10deg);
         position: relative;
         overflow: hidden;
+
+        @supports (clip-path: circle(50%)) or (-webkit-clip-path: circle(50%)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius: none;
+        }
     }
     
     &__img {

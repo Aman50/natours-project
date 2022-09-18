@@ -9,20 +9,22 @@
 // Media Query Manager
 @mixin respond($screen) {
     @if ($screen == $big-screen) {
-        @media (min-width: calc($big-screen / 16px * 1em)) {
+        @media only screen and (min-width: calc($big-screen / 16px * 1em)) {
             @content;
         }
     }
 
     @if ($screen != $big-screen) {
-        @media (max-width: calc($screen / 16px * 1em)) {
+        @media only screen and (max-width: calc($screen / 16px * 1em)) {
             @content;
         }
     }
 }
 
 @mixin respond-image($smallVersionWidth) {
-    @media (min-resolution: 192dpi) and (min-width: calc($smallVersionWidth / 2)), (min-width: $smallVersionWidth) {
+    @media only screen and (min-resolution: 192dpi) and (min-width: calc($smallVersionWidth / 2)),
+           only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: calc($smallVersionWidth / 2)),
+           only screen and (min-width: $smallVersionWidth) {
         @content;
     }
 }

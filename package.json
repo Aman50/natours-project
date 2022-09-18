@@ -4,7 +4,15 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:scss": "sass ./scss/main.scss ./styles/styles.css -w"
+    "watch:scss": "sass ./scss/main.scss ./styles/styles.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:scss devserver",
+
+    "compile:scss": "sass ./scss/main.scss ./styles/styles.compile.css",
+    "concat:scss": "concat -o ./styles/styles.concat.css ./styles/icon-fonts.css ./styles/styles.compile.css",
+    "prefix:scss": "postcss --use autoprefixer -b 'last 10 versions' ./styles/styles.concat.css -o ./styles/styles.prefix.css",
+    "compress:scss": "sass ./styles/styles.prefix.css ./styles/styles.min.css --style=compressed",
+    "build:scss": "npm-run-all compile:scss concat:scss prefix:scss compress:scss"
   },
   "repository": {
     "type": "git",
@@ -17,6 +25,11 @@
   },
   "homepage": "https://github.com/Aman50/natours-project#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.11",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0",
     "sass": "^1.54.9"
   }
 }
